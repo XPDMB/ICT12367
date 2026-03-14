@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์ม - Assignment 8</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero { background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; color: white; padding: 100px 0; text-align: center; }
+        .hero-overlay { background-color: rgba(0, 0, 0, 0.6); padding: 50px; border-radius: 10px; display: inline-block; }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Assignment 8</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก (Home)</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="form.html">แบบฟอร์ม (Form)</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">เกี่ยวกับเรา (About)</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero mb-5">
+        <div class="container">
+            <div class="hero-overlay">
+                <h1 class="display-4 fw-bold">แบบฟอร์มลงทะเบียน</h1>
+                <p class="lead">บันทึกข้อมูลและส่งรายละเอียดของคุณที่นี่</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h4 class="mb-0">ข้อมูลนักศึกษา</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <form>
+                            <div class="mb-3">
+                                <label for="studentId" class="form-label">รหัสนักศึกษา (Student ID)</label>
+                                <input type="text" class="form-control" id="studentId" placeholder="เช่น 64000010" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">ชื่อ-นามสกุล (Full Name)</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="กรอกชื่อและนามสกุล" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">อีเมล (E-mail Address)</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@email.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">รหัสผ่าน (Password)</label>
+                                <input type="password" class="form-control" id="password" placeholder="ตั้งรหัสผ่านสำหรับเข้าสู่ระบบ" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="detail" class="form-label">รายละเอียดเพิ่มเติม (Details)</label>
+                                <textarea class="form-control" id="detail" rows="3" placeholder="ข้อความเพิ่มเติม..."></textarea>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+                                <button type="submit" class="btn btn-primary px-5 py-2">บันทึกข้อมูล</button>
+                                <button type="reset" class="btn btn-danger px-5 py-2">ยกเลิก</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
