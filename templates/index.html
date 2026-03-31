@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Directory Portal{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h2 class="mb-4 text-center">ยินดีต้อนรับเข้าสู่ข้อมูลประชากร</h2>
+        
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th class="text-center" width="10%">รหัสประชากร</th>
+                        <th>ชื่อ-นามสกุล</th>
+                        <th class="text-center" width="15%">อายุ</th>
+                        <th class="text-center" width="15%">แก้ไข</th>
+                        <th class="text-center" width="15%">ลบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for person in persons %}
+                    <tr class="animate-fade-in" style="animation-delay: {{ forloop.counter0|add:0.1 }}s">
+                        <td class="text-center"><span class="badge-id">{{ person.id }}</span></td>
+                        <td><strong>{{ person.name }}</strong></td>
+                        <td class="text-center"><span class="badge-age">{{ person.age }} ปี</span></td>
+                        <td class="text-center">
+                            <button class="btn btn-sm btn-warning">แก้ไข</button>
+                        </td>
+                        <td class="text-center">
+                            <a href="{% url 'delete' person.id %}" class="btn btn-sm btn-danger text-white">ลบ</a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="5" class="text-center py-5 text-muted">ไม่พบข้อมูลประชากรในระบบ</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="mt-4 text-center">
+            <a href="/form/" class="btn btn-success px-5">เพิ่มข้อมูลประชากร</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

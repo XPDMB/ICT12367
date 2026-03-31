@@ -2,7 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-kix(03=#co^&&m5_m0)3*m6t@d4js)fhf82j1ebp(cmlywa+pu'
+SECRET_KEY = 'django-insecure-=x*&xo4nejqt23q2w%+sf33o76r%9q1abuw1(a*hfi!bug(ejq'
 
 DEBUG = True
 
@@ -33,7 +33,7 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
